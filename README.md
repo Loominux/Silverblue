@@ -2,22 +2,24 @@
 
 This is my Fedora [Silverblue](https://silverblue.fedoraproject.org) setup.
 
-**WIP**
-
 ## Software
 
-Install [RPM Fusion](https://rpmfusion.org).
+### Install [RPM Fusion](https://rpmfusion.org).
 
 ```sh
 sudo rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+systemctl reboot
 ```
 Install packages
 
 ```sh
 rpm-ostree install g++ avahi-compat-libdns_sd-devel cmake discord gnome-tweaks gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel htop libplist-devel make neofetch openssl-devel steam wine
+
+systemctl reboot
 ```
 
-Install Flatpak
+### Install Flatpak
 
 ```sh
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -27,6 +29,15 @@ Install [Flatpak](https://www.flatpak.org) packages
 
 ```sh
 flatpak install flathub com.usebottles.bottles
+```
+## Gnome Shell Extensions
+
+I use [this](https://github.com/brunelli/gnome-shell-extension-installer/) script to install shell extensions
+
+```sh
+wget https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer -P  ~/Downloads/
+chmod +x ~/Downloads/gnome-shell-extension-installer
+~/Downloads/gnome-shell-extension-installer --yes --restart-shell 19 517 4099 1319 2890 
 ```
 
 ## Theme
@@ -53,15 +64,4 @@ gsettings set org.gnome.desktop.interface cursor-theme "Nordic-cursors"
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
 ```
 
-### Gnome Shell Extensions
-
-I use [this](https://github.com/brunelli/gnome-shell-extension-installer/) script to install shell extensions
-
-```sh
-wget https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer -P  ~/Downloads/
-chmod +x ~/Downloads/gnome-shell-extension-installer
-~/Downloads/gnome-shell-extension-installer --yes --restart-shell 19 517 4099 1319 2890 
-```
-
-After this script open the `Extensions` application and enable all extensions, then go to settings of `User Themes` and pick `Nordic-darker-v40`.
-
+After this script is done open the `Extensions` application and enable all extensions, then go to settings of `User Themes` and pick `Nordic-darker-v40`. After that go into the `Settings` application and pick `Dark` in `Appearance -> Styles`.
