@@ -23,7 +23,7 @@ Install Flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
-Install Flatpak packages
+Install [Flatpak](https://www.flatpak.org) packages
 
 ```sh
 flatpak install flathub com.usebottles.bottles
