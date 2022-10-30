@@ -60,7 +60,8 @@ I use [this](https://github.com/brunelli/gnome-shell-extension-installer/) scrip
 ```sh
 wget https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer -P  ~/Downloads/
 chmod +x ~/Downloads/gnome-shell-extension-installer
-~/Downloads/gnome-shell-extension-installer --yes 19 517 4099 1319 2890 
+~/Downloads/gnome-shell-extension-installer --yes --restart-shell 19 517 4099 1319 2890 
 ```
 
+After this script open the `Extensions` application and enable all extensions, then go to settings of `User Themes` and pick `Nordic-darker-v40`.
 
