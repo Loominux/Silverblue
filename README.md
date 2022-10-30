@@ -7,6 +7,7 @@ This is my Fedora [Silverblue](https://silverblue.fedoraproject.org) setup.
 The setup script is split into 2 parts, because Silverblue needs to reboot to have acces to the RPM Fusion packages.
 
 Run the first script `curl https://raw.githubusercontent.com/Loominux/Silverblue/main/script-1.sh | sh`
+
 Run the second script `https://raw.githubusercontent.com/Loominux/Silverblue/main/script-2.sh`
 
 
