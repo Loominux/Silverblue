@@ -46,8 +46,8 @@ tar -xf ~/Downloads/Zafiro-Icons-Dark.tar.xz -C ~/.icons
 git clone https://github.com/EliverLara/Nordic ~/.icons/Nordic
 mv ~/.icons/Nordic/kde/cursors/Nordic-cursors ~/.icons/
 
-gsettings set org.gnome.desktop.interface gtk-theme "Nordic"
-gsettings set org.gnome.desktop.wm.preferences theme "Nordic"
+gsettings set org.gnome.desktop.interface gtk-theme "Nordic-darker-v40"
+gsettings set org.gnome.desktop.wm.preferences theme "Nordic-darker-v40"
 gsettings set org.gnome.desktop.interface icon-theme "Zafiro-Icons-Dark"
 gsettings set org.gnome.desktop.interface cursor-theme "Nordic-cursors"
 ```
