@@ -53,4 +53,14 @@ gsettings set org.gnome.desktop.interface cursor-theme "Nordic-cursors"
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
 ```
 
+### Gnome Shell Extensions
+
+I use [this](https://github.com/brunelli/gnome-shell-extension-installer/) script to install shell extensions
+
+```sh
+wget -o ~/Downloads/gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer"
+chmod +x ~/Downloads/gnome-shell-extension-installer
+~/Downloads/gnome-shell-extension-installer --yes 19 517 4099 1319 2890 
+```
+
 
