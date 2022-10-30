@@ -14,7 +14,7 @@ sudo rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free
 Install packages
 
 ```sh
-g++ avahi-compat-libdns_sd-devel cmake discord gnome-tweaks gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel htop libplist-devel make neofetch openssl-devel steam wine
+rpm-ostree install g++ avahi-compat-libdns_sd-devel cmake discord gnome-tweaks gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel htop libplist-devel make neofetch openssl-devel steam wine
 ```
 
 Install Flatpak
