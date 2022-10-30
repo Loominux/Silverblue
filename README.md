@@ -43,8 +43,13 @@ wget https://github.com/zayronxio/Zafiro-icons/releases/download/1.3/Zafiro-Icon
 tar -xf ~/Downloads/Nordic-darker-v40.tar.xz -C ~/.themes
 tar -xf ~/Downloads/Zafiro-Icons-Dark.tar.xz -C ~/.icons
 
-git clone https://github.com/EliverLara/Nordic ~/.icons/
+git clone https://github.com/EliverLara/Nordic ~/.icons/Nordic
 mv ~/.icons/Nordic/kde/cursors/Nordic-cursors ~/.icons/
+
+gsettings set org.gnome.desktop.interface gtk-theme "Nordic"
+gsettings set org.gnome.desktop.wm.preferences theme "Nordic"
+gsettings set org.gnome.desktop.interface icon-theme "Zafiro-Icons-Dark"
+gsettings set org.gnome.desktop.interface cursor-theme "Nordic-cursors"
 ```
 
 
