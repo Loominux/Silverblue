@@ -37,8 +37,8 @@ My Linux theme is using the [Nordic Theme](https://github.com/EliverLara/Nordic)
 mkdir ~/.themes
 mkdir ~/.icons
 
-wget https://github.com/EliverLara/Nordic/releases/download/v2.2.0/Nordic-darker-v40.tar.xz -P ~/Downloads/Nordic-darker-v40.tar.xz
-wget https://github.com/zayronxio/Zafiro-icons/releases/download/1.3/Zafiro-Icons-Dark.tar.xz -P ~/Downloads/Zafiro-Icons-Dark.tar.xz 
+wget https://github.com/EliverLara/Nordic/releases/download/v2.2.0/Nordic-darker-v40.tar.xz -P ~/Downloads/
+wget https://github.com/zayronxio/Zafiro-icons/releases/download/1.3/Zafiro-Icons-Dark.tar.xz -P ~/Downloads/
 
 tar -xf ~/Downloads/Nordic-darker-v40.tar.xz -C ~/.themes
 tar -xf ~/Downloads/Zafiro-Icons-Dark.tar.xz -C ~/.icons
