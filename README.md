@@ -50,6 +50,7 @@ gsettings set org.gnome.desktop.interface gtk-theme "Nordic-darker-v40"
 gsettings set org.gnome.desktop.wm.preferences theme "Nordic-darker-v40"
 gsettings set org.gnome.desktop.interface icon-theme "Zafiro-Icons-Dark"
 gsettings set org.gnome.desktop.interface cursor-theme "Nordic-cursors"
+gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
 ```
 
 
