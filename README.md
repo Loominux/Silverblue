@@ -8,7 +8,7 @@ The setup script is split into 2 parts, because Silverblue needs to reboot to ha
 
 Run the first script `curl https://raw.githubusercontent.com/Loominux/Silverblue/main/script-1.sh | sh`
 
-Run the second script `https://raw.githubusercontent.com/Loominux/Silverblue/main/script-2.sh | sh`
+Run the second script `curl https://raw.githubusercontent.com/Loominux/Silverblue/main/script-2.sh | sh`
 
 
 ## Software
