@@ -62,7 +62,7 @@ chmod +x ~/Downloads/gnome-shell-extension-installer
 
 ## Theme
 
-My Linux theme is using the [Nordic Theme](https://github.com/EliverLara/Nordic) with [Zafiro Icons](https://github.com/zayronxio/Zafiro-icons).
+My Linux theme is using the [Nordic Theme](https://github.com/EliverLara/Nordic) with [Zafiro Icons](https://github.com/zayronxio/Zafiro-icons). I also use a [Terminal color theme](https://github.com/arcticicestudio/nord-gnome-terminal).
 
 ```sh
 mkdir ~/.themes
