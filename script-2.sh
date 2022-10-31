@@ -31,5 +31,8 @@ gsettings set org.gnome.desktop.interface cursor-theme "Nordic-cursors"
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
 gsettings set org.gnome.desktop.background picture-uri-dark ~/Downloads/nordic-obsession.png
 
+git clone https://github.com/arcticicestudio/nord-gnome-terminal.git ~/Downloads/nord-gnome-terminal
+~/Downloads/nord-gnome-terminal/src/nord.sh
+
 
 systemctl reboot
