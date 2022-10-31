@@ -13,7 +13,7 @@ curl https://raw.githubusercontent.com/Loominux/Silverblue/main/script-1.sh | su
 
 Run the second script
 ```sh
-curl https://raw.githubusercontent.com/Loominux/Silverblue/main/script-2.sh | sudo sh
+curl https://raw.githubusercontent.com/Loominux/Silverblue/main/script-2.sh | sh
 ```
 
 After the second script is done open the `Extensions` application and enable all extensions, then go to settings of `User Themes` and pick `Nordic-darker-v40`. After that go into the `Settings` application and pick `Dark` in `Appearance -> Styles`.
