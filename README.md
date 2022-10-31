@@ -2,6 +2,12 @@
 
 This is my Fedora [Silverblue](https://silverblue.fedoraproject.org) setup.
 
+##Preview
+
+
+
+I get my Wallpaper, from [this repo](https://github.com/dxnst/nord-wallpapers).
+
 ## Script
 
 The setup script is split into 2 parts, because Silverblue needs to reboot to have acces to the RPM Fusion packages.
@@ -25,15 +31,12 @@ After the second script is done open the `Extensions` application and enable all
 
 ```sh
 sudo rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-systemctl reboot
 ```
-Install packages
+
+Install packages (to be able to install all packages, you need to install RPM Fusion and reboot first)
 
 ```sh
 rpm-ostree install g++ avahi-compat-libdns_sd-devel cmake discord gnome-tweaks gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel htop libplist-devel make neofetch openssl-devel steam wine
-
-systemctl reboot
 ```
 
 ### Install Flatpak
@@ -74,11 +77,15 @@ tar -xf ~/Downloads/Zafiro-Icons-Dark.tar.xz -C ~/.icons
 git clone https://github.com/EliverLara/Nordic ~/.icons/Nordic
 mv ~/.icons/Nordic/kde/cursors/Nordic-cursors ~/.icons/
 
+wget https://github.com/dxnst/nord-wallpapers/raw/master/nordic-obsession.png -P ~/Downloads
+
 gsettings set org.gnome.desktop.interface gtk-theme "Nordic-darker-v40"
 gsettings set org.gnome.desktop.wm.preferences theme "Nordic-darker-v40"
 gsettings set org.gnome.desktop.interface icon-theme "Zafiro-Icons-Dark"
 gsettings set org.gnome.desktop.interface cursor-theme "Nordic-cursors"
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
-```
+gsettings set org.gnome.desktop.background picture-uri-dark ~/Downloads/nordic-obsession.png
 
-I get my Wallpaper, from [this repo](https://github.com/dxnst/nord-wallpapers).
+git clone https://github.com/arcticicestudio/nord-gnome-terminal.git ~/Downloads/nord-gnome-terminal
+~/Downloads/nord-gnome-terminal/src/nord.sh
+```
