@@ -4,7 +4,6 @@ rpm-ostree upgrade
 
 rpm-ostree install g++ avahi-compat-libdns_sd-devel cmake discord gnome-tweaks gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel htop libplist-devel make neofetch openssl-devel steam wine
 
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.usebottles.bottles
 
 wget https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer -P  ~/Downloads/
