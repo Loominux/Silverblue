@@ -6,9 +6,15 @@ This is my Fedora [Silverblue](https://silverblue.fedoraproject.org) setup.
 
 The setup script is split into 2 parts, because Silverblue needs to reboot to have acces to the RPM Fusion packages.
 
-Run the first script `curl https://raw.githubusercontent.com/Loominux/Silverblue/main/script-1.sh | sudo sh`
+Run the first script 
+```sh
+curl https://raw.githubusercontent.com/Loominux/Silverblue/main/script-1.sh | sudo sh
+```
 
-Run the second script `curl https://raw.githubusercontent.com/Loominux/Silverblue/main/script-2.sh | sudo sh`
+Run the second script
+```sh
+curl https://raw.githubusercontent.com/Loominux/Silverblue/main/script-2.sh | sudo sh
+```
 
 After the second script is done open the `Extensions` application and enable all extensions, then go to settings of `User Themes` and pick `Nordic-darker-v40`. After that go into the `Settings` application and pick `Dark` in `Appearance -> Styles`.
 
