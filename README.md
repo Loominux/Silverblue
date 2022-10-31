@@ -2,9 +2,9 @@
 
 This is my Fedora [Silverblue](https://silverblue.fedoraproject.org) setup.
 
-##Preview
+## Preview
 
-
+![Preview](https://user-images.githubusercontent.com/115210873/199125395-d0ec6b6f-ad1b-4c50-b8fd-4263df1a1789.png)
 
 I get my Wallpaper, from [this repo](https://github.com/dxnst/nord-wallpapers).
 
