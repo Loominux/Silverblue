@@ -29,7 +29,7 @@ gsettings set org.gnome.desktop.wm.preferences theme "Nordic-darker-v40"
 gsettings set org.gnome.desktop.interface icon-theme "Zafiro-Icons-Dark"
 gsettings set org.gnome.desktop.interface cursor-theme "Nordic-cursors"
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
-gsettings set org.gnome.desktop.background picture-uri file:////var/home/*/Downloads/nordic-obsession.png
+gsettings set org.gnome.desktop.background picture-uri-dark ~/Downloads/nordic-obsession.png
 
 
 systemctl reboot
