@@ -27,5 +27,3 @@ gsettings set org.gnome.desktop.wm.preferences theme "Nordic-darker-v40"
 gsettings set org.gnome.desktop.interface icon-theme "Zafiro-Icons-Dark"
 gsettings set org.gnome.desktop.interface cursor-theme "Nordic-cursors"
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
-
-echo"Open the Extensions application and enable all extensions, then go to settings of User Themes and pick Nordic-darker-v40. After that go into the Settings application and pick Dark in Appearance -> Styles, then reboot"
