@@ -80,3 +80,5 @@ gsettings set org.gnome.desktop.interface icon-theme "Zafiro-Icons-Dark"
 gsettings set org.gnome.desktop.interface cursor-theme "Nordic-cursors"
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
 ```
+
+I get my Wallpaper, from [this repo](https://github.com/dxnst/nord-wallpapers).
