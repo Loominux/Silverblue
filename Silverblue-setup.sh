@@ -3,9 +3,10 @@ rpm-ostree cancel
 rpm-ostree upgrade
 
 
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo
+sudo flatpak remote-modify flathub --enable
 
-rpm-ostree install gnome-tweaks htop neofetch wine openssl
+rpm-ostree install gnome-tweaks htop neofetch wine openssl lutris
 
 flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valvesoftware.Steam.CompatibilityTool.Proton-GE
 
