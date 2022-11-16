@@ -15,7 +15,15 @@ Run the script
 curl https://raw.githubusercontent.com/Loominux/Silverblue/main/Silverblue-setup.sh | sh
 ```
 
-After the reboot is done open the `Extensions` application and enable all extensions, then go to settings of `User Themes` and pick `Nordic-darker-v40`. After that go into the `Settings` application and pick `Dark` in `Appearance -> Styles`.
+After the reboot run these commands
+
+
+```sh
+gnome-extensions enable caffeine@patapon.info
+gnome-extensions enable gsconnect@andyholmes.github.io
+gnome-extensions enable no-overview@fthx
+gnome-extensions enable trayIconsReloaded@selfmade.pl
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 
 
 ## Software
