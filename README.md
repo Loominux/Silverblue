@@ -28,6 +28,7 @@ rpm-ostree install gnome-tweaks htop neofetch wine openssl
 
 ```sh
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo
+sudo flatpak remote-modify flathub --enable
 ```
 
 Install [Flatpak](https://www.flatpak.org) packages
