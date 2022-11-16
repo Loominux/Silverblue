@@ -29,7 +29,7 @@ gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 ## Software
 
 ```sh
-rpm-ostree install gnome-tweaks htop neofetch wine openssl lutris
+rpm-ostree install gnome-tweaks htop neofetch wine openssl lutris neovim
 ```
 
 ### Install Flatpak
@@ -79,6 +79,9 @@ mv ~/.icons/Nordic/kde/cursors/Nordic-cursors ~/.icons/
 
 wget https://github.com/dxnst/nord-wallpapers/raw/master/nordic-obsession.png -P ~/Downloads
 
+dconf write /org/gnome/shell/extensions/user-theme/name "'Nordic-darker-v40'"
+
+gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 gsettings set org.gnome.desktop.interface gtk-theme "Nordic-darker-v40"
 gsettings set org.gnome.desktop.wm.preferences theme "Nordic-darker-v40"
 gsettings set org.gnome.desktop.interface icon-theme "Zafiro-Icons-Dark"
@@ -90,5 +93,4 @@ git clone https://github.com/arcticicestudio/nord-gnome-terminal.git ~/Downloads
 ~/Downloads/nord-gnome-terminal/src/nord.sh
 
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-dconf write /org/gnome/shell/extensions/user-theme/name 'Nordic-darker-v40'
 ```
