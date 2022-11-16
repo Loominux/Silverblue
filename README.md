@@ -10,7 +10,7 @@ I got my Wallpaper (nordic-obsession), from [this repo](https://github.com/dxnst
 
 ## Script
 
-Run the first script 
+Run the script 
 ```sh
 curl https://raw.githubusercontent.com/Loominux/Silverblue/main/Silverblue-setup.sh | sudo sh
 ```
