@@ -5,7 +5,7 @@ rpm-ostree upgrade
 
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo
-sudo flatpak remote-modify flathub --enable
+flatpak remote-modify flathub --enable
 
 rpm-ostree install gnome-tweaks htop neofetch wine openssl lutris
 
@@ -35,7 +35,7 @@ mv ~/.icons/Nordic/kde/cursors/Nordic-cursors ~/.icons/
 
 wget https://github.com/dxnst/nord-wallpapers/raw/master/nordic-obsession.png -P ~/Downloads
 
-dconf write /org/gnome/shell/extensions/user-theme/name 'Nordic-darker-v40'
+dconf write /org/gnome/shell/extensions/user-theme/name "'Nordic-darker-v40'"
 
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 gsettings set org.gnome.desktop.interface gtk-theme "Nordic-darker-v40"
