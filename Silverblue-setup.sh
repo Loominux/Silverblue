@@ -5,12 +5,12 @@ flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valve
 
 rpm-ostree cancel
 rpm-ostree upgrade
-rpm-ostree install gnome-tweaks htop neofetch wine openssl lutris
+rpm-ostree install gnome-tweaks htop neofetch wine openssl lutris neovim
 
 
 wget https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer -P  ~/Downloads/
 chmod +x ~/Downloads/gnome-shell-extension-installer
-~/Downloads/gnome-shell-extension-installer --yes 19 517 4099 1319 2890 
+~/Downloads/gnome-shell-extension-installer 19 517 4099 1319 2890 
 
 mkdir ~/.themes
 mkdir ~/.icons
