@@ -15,7 +15,7 @@ Run the script
 curl https://raw.githubusercontent.com/Loominux/Silverblue/main/Silverblue-setup.sh | sudo sh
 ```
 
-After the second script is done open the `Extensions` application and enable all extensions, then go to settings of `User Themes` and pick `Nordic-darker-v40`. After that go into the `Settings` application and pick `Dark` in `Appearance -> Styles`.
+After the reboot is done open the `Extensions` application and enable all extensions, then go to settings of `User Themes` and pick `Nordic-darker-v40`. After that go into the `Settings` application and pick `Dark` in `Appearance -> Styles`.
 
 
 ## Software
