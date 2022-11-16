@@ -12,7 +12,7 @@ I got my Wallpaper (nordic-obsession), from [this repo](https://github.com/dxnst
 
 Run the first script 
 ```sh
-curl https://raw.githubusercontent.com/Loominux/Silverblue/main/setup.sh | sudo sh
+curl https://raw.githubusercontent.com/Loominux/Silverblue/main/Silverblue-setup.sh | sudo sh
 ```
 
 After the second script is done open the `Extensions` application and enable all extensions, then go to settings of `User Themes` and pick `Nordic-darker-v40`. After that go into the `Settings` application and pick `Dark` in `Appearance -> Styles`.
