@@ -1,6 +1,6 @@
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo
 flatpak remote-modify flathub --enable
-flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valvesoftware.Steam.CompatibilityTool.Proton-GE --assumeyes
 
 
 rpm-ostree cancel
@@ -10,7 +10,7 @@ rpm-ostree install gnome-tweaks htop neofetch wine openssl lutris
 
 wget https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer -P  ~/Downloads/
 chmod +x ~/Downloads/gnome-shell-extension-installer
-~/Downloads/gnome-shell-extension-installer --yes --restart-shell 19 517 4099 1319 2890 
+~/Downloads/gnome-shell-extension-installer --yes 19 517 4099 1319 2890 
 
 gnome-extensions enable caffeine@patapon.info
 gnome-extensions enable gsconnect@andyholmes.github.io
