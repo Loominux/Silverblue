@@ -14,12 +14,7 @@ The setup script is split into 2 parts, because Silverblue needs to reboot to ha
 
 Run the first script 
 ```sh
-curl https://raw.githubusercontent.com/Loominux/Silverblue/main/script-1.sh | sudo sh
-```
-
-Run the second script
-```sh
-curl https://raw.githubusercontent.com/Loominux/Silverblue/main/script-2.sh | sh
+curl https://raw.githubusercontent.com/Loominux/Silverblue/main/setup.sh | sudo sh
 ```
 
 After the second script is done open the `Extensions` application and enable all extensions, then go to settings of `User Themes` and pick `Nordic-darker-v40`. After that go into the `Settings` application and pick `Dark` in `Appearance -> Styles`.
@@ -27,16 +22,8 @@ After the second script is done open the `Extensions` application and enable all
 
 ## Software
 
-### Install [RPM Fusion](https://rpmfusion.org).
-
 ```sh
-sudo rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-```
-
-Install packages (to be able to install all packages, you need to install RPM Fusion and reboot first)
-
-```sh
-rpm-ostree install g++ avahi-compat-libdns_sd-devel cmake discord gnome-tweaks gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel htop libplist-devel make neofetch openssl-devel steam wine openssl
+rpm-ostree install gnome-tweaks htop neofetch wine openssl
 ```
 
 ### Install Flatpak
@@ -48,7 +35,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 Install [Flatpak](https://www.flatpak.org) packages
 
 ```sh
-flatpak install flathub com.usebottles.bottles
+flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord
 ```
 ## Gnome Shell Extensions
 
