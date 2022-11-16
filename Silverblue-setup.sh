@@ -39,7 +39,6 @@ gsettings set org.gnome.desktop.background picture-uri-dark ~/Downloads/nordic-o
 git clone https://github.com/arcticicestudio/nord-gnome-terminal.git ~/Downloads/nord-gnome-terminal
 ~/Downloads/nord-gnome-terminal/src/nord.sh
 
-gsettings set org.gnome.Terminal.ProfilesList default '7586c894-fd54-4ad2-8d50-196739933f69'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 systemctl reboot
