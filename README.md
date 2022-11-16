@@ -15,7 +15,7 @@ Run the script
 curl https://raw.githubusercontent.com/Loominux/Silverblue/main/Silverblue-setup.sh | sh
 ```
 
-After the reboot run these commands
+After the reboot run these commands and set `Nord` as the default Terminal Profile
 
 
 ```sh
@@ -24,7 +24,7 @@ gnome-extensions enable gsconnect@andyholmes.github.io
 gnome-extensions enable no-overview@fthx
 gnome-extensions enable trayIconsReloaded@selfmade.pl
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
-
+```
 
 ## Software
 
