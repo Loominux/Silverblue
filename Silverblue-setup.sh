@@ -3,6 +3,7 @@ rpm-ostree cancel
 rpm-ostree upgrade
 
 
+
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo
 sudo flatpak remote-modify flathub --enable
 
@@ -13,6 +14,12 @@ flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valve
 wget https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer -P  ~/Downloads/
 chmod +x ~/Downloads/gnome-shell-extension-installer
 ~/Downloads/gnome-shell-extension-installer --yes --restart-shell 19 517 4099 1319 2890 
+
+gnome-extensions enable caffeine@patapon.info
+gnome-extensions enable gsconnect@andyholmes.github.io
+gnome-extensions enable no-overview@fthx
+gnome-extensions enable trayIconsReloaded@selfmade.pl
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 
 mkdir ~/.themes
 mkdir ~/.icons
@@ -28,6 +35,9 @@ mv ~/.icons/Nordic/kde/cursors/Nordic-cursors ~/.icons/
 
 wget https://github.com/dxnst/nord-wallpapers/raw/master/nordic-obsession.png -P ~/Downloads
 
+dconf write /org/gnome/shell/extensions/user-theme/name 'Nordic-darker-v40'
+
+gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 gsettings set org.gnome.desktop.interface gtk-theme "Nordic-darker-v40"
 gsettings set org.gnome.desktop.wm.preferences theme "Nordic-darker-v40"
 gsettings set org.gnome.desktop.interface icon-theme "Zafiro-Icons-Dark"
@@ -37,5 +47,8 @@ gsettings set org.gnome.desktop.background picture-uri-dark ~/Downloads/nordic-o
 
 git clone https://github.com/arcticicestudio/nord-gnome-terminal.git ~/Downloads/nord-gnome-terminal
 ~/Downloads/nord-gnome-terminal/src/nord.sh
+
+gsettings set org.gnome.Terminal.ProfilesList default '7586c894-fd54-4ad2-8d50-196739933f69'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 systemctl reboot
