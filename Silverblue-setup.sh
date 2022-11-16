@@ -1,15 +1,12 @@
-rpm-ostree cancel
-
-rpm-ostree upgrade
-
-
-
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo
 flatpak remote-modify flathub --enable
+flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valvesoftware.Steam.CompatibilityTool.Proton-GE
 
+
+rpm-ostree cancel
+rpm-ostree upgrade
 rpm-ostree install gnome-tweaks htop neofetch wine openssl lutris
 
-flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valvesoftware.Steam.CompatibilityTool.Proton-GE
 
 wget https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer -P  ~/Downloads/
 chmod +x ~/Downloads/gnome-shell-extension-installer
@@ -20,6 +17,8 @@ gnome-extensions enable gsconnect@andyholmes.github.io
 gnome-extensions enable no-overview@fthx
 gnome-extensions enable trayIconsReloaded@selfmade.pl
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+
+
 
 mkdir ~/.themes
 mkdir ~/.icons
