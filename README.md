@@ -10,8 +10,6 @@ I got my Wallpaper (nordic-obsession), from [this repo](https://github.com/dxnst
 
 ## Script
 
-The setup script is split into 2 parts, because Silverblue needs to reboot to have acces to the RPM Fusion packages.
-
 Run the first script 
 ```sh
 curl https://raw.githubusercontent.com/Loominux/Silverblue/main/setup.sh | sudo sh
