@@ -12,7 +12,7 @@ I got my Wallpaper (nordic-obsession), from [this repo](https://github.com/dxnst
 
 Run the script 
 ```sh
-curl https://raw.githubusercontent.com/Loominux/Silverblue/main/Silverblue-setup.sh | sudo sh
+curl https://raw.githubusercontent.com/Loominux/Silverblue/main/Silverblue-setup.sh | sh
 ```
 
 After the reboot is done open the `Extensions` application and enable all extensions, then go to settings of `User Themes` and pick `Nordic-darker-v40`. After that go into the `Settings` application and pick `Dark` in `Appearance -> Styles`.
@@ -27,7 +27,7 @@ rpm-ostree install gnome-tweaks htop neofetch wine openssl
 ### Install Flatpak
 
 ```sh
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo
 ```
 
 Install [Flatpak](https://www.flatpak.org) packages
@@ -42,7 +42,7 @@ I use [this](https://github.com/brunelli/gnome-shell-extension-installer/) scrip
 ```sh
 wget https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer -P  ~/Downloads/
 chmod +x ~/Downloads/gnome-shell-extension-installer
-~/Downloads/gnome-shell-extension-installer --yes --restart-shell 19 517 4099 1319 2890 
+~/Downloads/gnome-shell-extension-installer --yes 19 517 4099 1319 2890 
 ```
 
 ## Theme
