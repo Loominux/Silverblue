@@ -21,7 +21,7 @@ After the reboot is done open the `Extensions` application and enable all extens
 ## Software
 
 ```sh
-rpm-ostree install gnome-tweaks htop neofetch wine openssl
+rpm-ostree install gnome-tweaks htop neofetch wine openssl lutris
 ```
 
 ### Install Flatpak
