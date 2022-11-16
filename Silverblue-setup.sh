@@ -12,14 +12,6 @@ wget https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnom
 chmod +x ~/Downloads/gnome-shell-extension-installer
 ~/Downloads/gnome-shell-extension-installer --yes 19 517 4099 1319 2890 
 
-gnome-extensions enable caffeine@patapon.info
-gnome-extensions enable gsconnect@andyholmes.github.io
-gnome-extensions enable no-overview@fthx
-gnome-extensions enable trayIconsReloaded@selfmade.pl
-gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
-
-
-
 mkdir ~/.themes
 mkdir ~/.icons
 
@@ -49,5 +41,13 @@ git clone https://github.com/arcticicestudio/nord-gnome-terminal.git ~/Downloads
 
 gsettings set org.gnome.Terminal.ProfilesList default '7586c894-fd54-4ad2-8d50-196739933f69'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
+killall -SIGQUIT gnome-shell
+
+gnome-extensions enable caffeine@patapon.info
+gnome-extensions enable gsconnect@andyholmes.github.io
+gnome-extensions enable no-overview@fthx
+gnome-extensions enable trayIconsReloaded@selfmade.pl
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 
 systemctl reboot
