@@ -1,7 +1,6 @@
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo
 sudo flatpak remote-modify flathub --enable
-flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valvesoftware.Steam.CompatibilityTool.Proton-GE com.raggesilver.BlackBox org.gtk.Gtk3theme.Catppuccin-Mocha-Mauve
- --ostree-verbose --assumeyes
+flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valvesoftware.Steam.CompatibilityTool.Proton-GE com.raggesilver.BlackBox org.gtk.Gtk3theme.Catppuccin-Mocha-Mauve --ostree-verbose --assumeyes
 
 
 rpm-ostree cancel
