@@ -1,6 +1,6 @@
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo
 sudo flatpak remote-modify flathub --enable
-flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valvesoftware.Steam.CompatibilityTool.Proton-GE com.raggesilver.BlackBox org.gtk.Gtk3theme.Catppuccin-Mocha-Mauve --ostree-verbose --assumeyes
+flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valvesoftware.Steam.CompatibilityTool.Proton-GE com.raggesilver.BlackBox org.gtk.Gtk3theme.Catppuccin-Mocha-Mauve --assumeyes
 
 
 rpm-ostree cancel
@@ -47,7 +47,7 @@ gsettings set org.gnome.desktop.background picture-uri-dark ~/.themes/wallpaper/
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Macchiato-Standard-Mauve-Dark"
 gsettings set org.gnome.desktop.wm.preferences theme "Catppuccin-Macchiato-Standard-Mauve-Dark"
-gsettings set org.gnome.desktop.interface icon-theme "Colloid-purple-dracula-dark'"
+gsettings set org.gnome.desktop.interface icon-theme "Colloid-purple-dracula-dark"
 gsettings set org.gnome.desktop.interface cursor-theme "Colloid-cursors"
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
