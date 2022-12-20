@@ -64,35 +64,48 @@ gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 
 
 ### create folders
+```sh
 mkdir ~/.themes
 mkdir ~/.icons
+```
 
 ### Download and install GTK Theme
+```sh
 wget https://github.com/catppuccin/gtk/releases/download/v0.4.0/Catppuccin-Macchiato-Standard-Mauve-Dark.zip -P ~/Downloads/
 tar -xf ~/Downloads/Nordic-darker-v40.tar.xz -C ~/.themes
+```
 
 ### Download and install Icons and Cursor
+```sh
 git clone https://github.com/vinceliuice/Colloid-icon-theme ~/Downloads/Colloid-icon-theme
 sh ~/Downloads/Colloid-icon-theme/install.sh -s dracula -t purple
 cd ~/Downloads/Colloid-icon-theme/cursors/
 ./install.sh
+```
 
 ### Download Wallpaper
+```sh
 git clone https://github.com/catppuccin/wallpapers ~/.themes/wallpaper
-
+```
 
 ### GTK 4 config
+```sh
 mkdir -p "${HOME}/.config/gtk-4.0"
 ln -sf "${HOME}/.themes/Catppuccin-Macchiato-Standard-Mauve-Dark//gtk-4.0/assets" "${HOME}/.config/gtk-4.0/assets"
 ln -sf "${HOME}/.themes/Catppuccin-Macchiato-Standard-Mauve-Dark//gtk-4.0/gtk.css" "${HOME}/.config/gtk-4.0/gtk.css"
 ln -sf "${HOME}/.themes/Catppuccin-Macchiato-Standard-Mauve-Dark//gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css"
+```
 
 ### Flatpak config
+```sh
 sudo flatpak override --filesystem=$HOME/.themes
 sudo flatpak override --env=GTK_THEME=atppuccin-Macchiato-Standard-Mauve-Dark
 sudo flatpak --user override --filesystem=/home/$USER/.icons/:ro
+```
 
 ### gnome configuration
+
+```sh
 dconf write /org/gnome/shell/extensions/user-theme/name"'Catppuccin-Macchiato-Standard-Mauve-Dark'"
 gsettings set org.gnome.desktop.background picture-uri-dark ~/.themes/wallpaper/minimalistic/gradient-synth-cat.png
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
@@ -102,10 +115,10 @@ gsettings set org.gnome.desktop.interface icon-theme "Colloid-purple-dracula-dar
 gsettings set org.gnome.desktop.interface cursor-theme "Colloid-cursors"
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-
+```
 
 ### Terminal BlackBox Theme 
-
+```sh
 mkdir -p ~/.var/app/com.raggesilver.BlackBox/config/glib-2.0/settings
 echo "[com/raggesilver/BlackBox]
 style-preference=2
