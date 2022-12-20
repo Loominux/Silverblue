@@ -1,11 +1,12 @@
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo
 sudo flatpak remote-modify flathub --enable
-flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valvesoftware.Steam.CompatibilityTool.Proton-GE com.raggesilver.BlackBox --ostree-verbose --assumeyes
+flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valvesoftware.Steam.CompatibilityTool.Proton-GE com.raggesilver.BlackBox org.gtk.Gtk3theme.Catppuccin-Mocha-Mauve
+ --ostree-verbose --assumeyes
 
 
 rpm-ostree cancel
 rpm-ostree upgrade
-rpm-ostree install htop neofetch wine openssl lutris neovim gnome-themes-standard
+rpm-ostree install htop neofetch wine openssl lutris neovim gnome-themes-standard gnome-tweaks
 
 
 wget https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer -P  ~/Downloads/
@@ -18,7 +19,7 @@ mkdir ~/.icons
 
 # Download and install GTK Theme
 wget https://github.com/catppuccin/gtk/releases/download/v0.4.0/Catppuccin-Macchiato-Standard-Mauve-Dark.zip -P ~/Downloads/
-tar -xf ~/Downloads/Nordic-darker-v40.tar.xz -C ~/.themes
+unzip ~/Downloads/Catppuccin-Macchiato-Standard-Mauve-Dark.zip -d .themes/
 
 # Download and install Icons and Cursor
 git clone https://github.com/vinceliuice/Colloid-icon-theme ~/Downloads/Colloid-icon-theme
@@ -38,15 +39,15 @@ ln -sf "${HOME}/.themes/Catppuccin-Macchiato-Standard-Mauve-Dark//gtk-4.0/gtk-da
 
 # Flatpak config
 sudo flatpak override --filesystem=$HOME/.themes
-sudo flatpak override --env=GTK_THEME=atppuccin-Macchiato-Standard-Mauve-Dark
-sudo flatpak --user override --filesystem=/home/$USER/.icons/:ro
+sudo flatpak override --env=GTK_THEME=Catppuccin-Macchiato-Standard-Mauve-Dark
+sudo flatpak override --filesystem=/home/$USER/.icons/:ro
 
 # gnome configuration
-dconf write /org/gnome/shell/extensions/user-theme/name"'Catppuccin-Macchiato-Standard-Mauve-Dark'"
+dconf write /org/gnome/shell/extensions/user-theme/name "'Catppuccin-Macchiato-Standard-Mauve-Dark'"
 gsettings set org.gnome.desktop.background picture-uri-dark ~/.themes/wallpaper/minimalistic/gradient-synth-cat.png
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
-gsettings set org.gnome.desktop.interface gtk-theme "atppuccin-Macchiato-Standard-Mauve-Dark"
-gsettings set org.gnome.desktop.wm.preferences theme "atppuccin-Macchiato-Standard-Mauve-Dark"
+gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Macchiato-Standard-Mauve-Dark"
+gsettings set org.gnome.desktop.wm.preferences theme "Catppuccin-Macchiato-Standard-Mauve-Dark"
 gsettings set org.gnome.desktop.interface icon-theme "Colloid-purple-dracula-dark'"
 gsettings set org.gnome.desktop.interface cursor-theme "Colloid-cursors"
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
