@@ -6,7 +6,7 @@ sudo flatpak override --filesystem=$HOME/.themes
 sudo flatpak override --env=GTK_THEME=Catppuccin-Macchiato-Standard-Mauve-Dark
 sudo flatpak override --filesystem=/home/$USER/.icons/:ro
 
-flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valvesoftware.Steam.CompatibilityTool.Proton-GE com.raggesilver.BlackBox org.gtk.Gtk3theme.Catppuccin-Mocha-Mauve --assumeyes
+flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valvesoftware.Steam.CompatibilityTool.Proton-GE com.raggesilver.BlackBox org.gtk.Gtk3theme.Catppuccin-Mocha-Mauve --ostree-verbose --assumeyes
 
 
 rpm-ostree cancel
