@@ -1,11 +1,17 @@
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo
 sudo flatpak remote-modify flathub --enable
+
+# Flatpak theme config
+sudo flatpak override --filesystem=$HOME/.themes
+sudo flatpak override --env=GTK_THEME=Catppuccin-Macchiato-Standard-Mauve-Dark
+sudo flatpak override --filesystem=/home/$USER/.icons/:ro
+
 flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord com.valvesoftware.Steam.CompatibilityTool.Proton-GE com.raggesilver.BlackBox org.gtk.Gtk3theme.Catppuccin-Mocha-Mauve --assumeyes
 
 
 rpm-ostree cancel
 rpm-ostree upgrade
-rpm-ostree install htop neofetch wine openssl lutris neovim gnome-themes-standard gnome-tweaks
+rpm-ostree install htop neofetch wine openssl lutris neovim
 
 
 wget https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer -P  ~/Downloads/
@@ -36,10 +42,16 @@ ln -sf "${HOME}/.themes/Catppuccin-Macchiato-Standard-Mauve-Dark//gtk-4.0/assets
 ln -sf "${HOME}/.themes/Catppuccin-Macchiato-Standard-Mauve-Dark//gtk-4.0/gtk.css" "${HOME}/.config/gtk-4.0/gtk.css"
 ln -sf "${HOME}/.themes/Catppuccin-Macchiato-Standard-Mauve-Dark//gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css"
 
-# Flatpak config
-sudo flatpak override --filesystem=$HOME/.themes
-sudo flatpak override --env=GTK_THEME=Catppuccin-Macchiato-Standard-Mauve-Dark
-sudo flatpak override --filesystem=/home/$USER/.icons/:ro
+# Terminal BlackBox Theme 
+
+mkdir -p ~/.var/app/com.raggesilver.BlackBox/config/glib-2.0/settings
+echo "[com/raggesilver/BlackBox]
+style-preference=2
+theme-dark='Catppuccin-Macchiato'" > ~/.var/app/com.raggesilver.BlackBox/config/glib-2.0/settings/keyfile
+
+mkdir ~/.var/app/com.raggesilver.BlackBox/data/blackbox/schemes
+curl -o ~/.var/app/com.raggesilver.BlackBox/data/blackbox/schemes/Catppuccin-Macchiato.json https://raw.githubusercontent.com/catppuccin/blackbox/main/src/Catppuccin-Macchiato.json
+
 
 # gnome configuration
 dconf write /org/gnome/shell/extensions/user-theme/name "'Catppuccin-Macchiato-Standard-Mauve-Dark'"
@@ -53,14 +65,6 @@ gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,max
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 
-# Terminal BlackBox Theme 
 
-mkdir -p ~/.var/app/com.raggesilver.BlackBox/config/glib-2.0/settings
-echo "[com/raggesilver/BlackBox]
-style-preference=2
-theme-dark='Catppuccin-Macchiato'" > ~/.var/app/com.raggesilver.BlackBox/config/glib-2.0/settings/keyfile
-
-mkdir ~/.var/app/com.raggesilver.BlackBox/data/blackbox/schemes
-curl -o ~/.var/app/com.raggesilver.BlackBox/data/blackbox/schemes/Catppuccin-Macchiato.json https://raw.githubusercontent.com/catppuccin/blackbox/main/src/Catppuccin-Macchiato.json
-
+rpm-ostree upgrade
 systemctl reboot
