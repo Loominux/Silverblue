@@ -49,7 +49,7 @@ echo "[com/raggesilver/BlackBox]
 style-preference=2
 theme-dark='Catppuccin-Macchiato'" > ~/.var/app/com.raggesilver.BlackBox/config/glib-2.0/settings/keyfile
 
-mkdir ~/.var/app/com.raggesilver.BlackBox/data/blackbox/schemes
+mkdir -p ~/.var/app/com.raggesilver.BlackBox/data/blackbox/schemes
 curl -o ~/.var/app/com.raggesilver.BlackBox/data/blackbox/schemes/Catppuccin-Macchiato.json https://raw.githubusercontent.com/catppuccin/blackbox/main/src/Catppuccin-Macchiato.json
 
 
@@ -64,7 +64,4 @@ gsettings set org.gnome.desktop.interface cursor-theme "Colloid-cursors"
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
-
-
-rpm-ostree upgrade
 systemctl reboot
