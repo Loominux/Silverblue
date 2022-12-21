@@ -4,9 +4,9 @@ This is my Fedora [Silverblue](https://silverblue.fedoraproject.org) setup.
 
 ## Preview
 
-![Preview](https://user-images.githubusercontent.com/115210873/199125395-d0ec6b6f-ad1b-4c50-b8fd-4263df1a1789.png)
+![Example](https://user-images.githubusercontent.com/115210873/208792715-e95fb523-9551-480c-b40f-fef9b4053595.png)
 
-I got my Wallpaper (nordic-obsession), from [this repo](https://github.com/dxnst/nord-wallpapers).
+I got my Wallpaper (minimalistic/gradient-synth-cat.png), from [this repo](https://github.com/catppuccin/wallpapers).
 
 ## Script
 
@@ -15,7 +15,7 @@ Run the script
 curl https://raw.githubusercontent.com/Loominux/Silverblue/main/Silverblue-setup.sh | sh
 ```
 
-After the reboot run these commands and set `Nord` as the default Terminal Profile
+After the reboot run these commands.
 
 
 ```sh
@@ -29,8 +29,6 @@ gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 ## Software
 
 ```sh
-rpm-ostree cancel
-rpm-ostree upgrade
 rpm-ostree install htop neofetch wine openssl lutris neovim gnome-themes-standard 
 ```
 
@@ -68,58 +66,28 @@ I'm using the [Catppuccin GTK Theme](https://github.com/catppuccin/gtk), the spe
 
 ```sh
 # create folders
-
 mkdir ~/.themes
 mkdir ~/.icons
 
-
 # Download and install GTK Theme
-
 wget https://github.com/catppuccin/gtk/releases/download/v0.4.0/Catppuccin-Macchiato-Standard-Mauve-Dark.zip -P ~/Downloads/
 unzip ~/Downloads/Catppuccin-Macchiato-Standard-Mauve-Dark.zip -d .themes/
 
-
 # Download and install Icons and Cursor
-
 git clone https://github.com/vinceliuice/Colloid-icon-theme ~/Downloads/Colloid-icon-theme
 sh ~/Downloads/Colloid-icon-theme/install.sh -s dracula -t purple
 cd ~/Downloads/Colloid-icon-theme/cursors/
 ./install.sh
 
-
-# Download Wallpaper
-
+#Download Wallpaper
 git clone https://github.com/catppuccin/wallpapers ~/.themes/wallpaper
 
 
 # GTK 4 config
-
 mkdir -p "${HOME}/.config/gtk-4.0"
 ln -sf "${HOME}/.themes/Catppuccin-Macchiato-Standard-Mauve-Dark//gtk-4.0/assets" "${HOME}/.config/gtk-4.0/assets"
 ln -sf "${HOME}/.themes/Catppuccin-Macchiato-Standard-Mauve-Dark//gtk-4.0/gtk.css" "${HOME}/.config/gtk-4.0/gtk.css"
 ln -sf "${HOME}/.themes/Catppuccin-Macchiato-Standard-Mauve-Dark//gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css"
-
-
-# Flatpak config
-
-sudo flatpak override --filesystem=$HOME/.themes
-sudo flatpak override --env=GTK_THEME=Catppuccin-Macchiato-Standard-Mauve-Dark
-sudo flatpak override --filesystem=/home/$USER/.icons/:ro
-
-
-# gnome configuration
-
-
-dconf write /org/gnome/shell/extensions/user-theme/name "'Catppuccin-Macchiato-Standard-Mauve-Dark'"
-gsettings set org.gnome.desktop.background picture-uri-dark ~/.themes/wallpaper/minimalistic/gradient-synth-cat.png
-gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
-gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Macchiato-Standard-Mauve-Dark"
-gsettings set org.gnome.desktop.wm.preferences theme "Catppuccin-Macchiato-Standard-Mauve-Dark"
-gsettings set org.gnome.desktop.interface icon-theme "Colloid-purple-dracula-dark'"
-gsettings set org.gnome.desktop.interface cursor-theme "Colloid-cursors"
-gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-
 
 # Terminal BlackBox Theme 
 
@@ -128,7 +96,18 @@ echo "[com/raggesilver/BlackBox]
 style-preference=2
 theme-dark='Catppuccin-Macchiato'" > ~/.var/app/com.raggesilver.BlackBox/config/glib-2.0/settings/keyfile
 
-mkdir ~/.var/app/com.raggesilver.BlackBox/data/blackbox/schemes
+mkdir -p ~/.var/app/com.raggesilver.BlackBox/data/blackbox/schemes
 curl -o ~/.var/app/com.raggesilver.BlackBox/data/blackbox/schemes/Catppuccin-Macchiato.json https://raw.githubusercontent.com/catppuccin/blackbox/main/src/Catppuccin-Macchiato.json
 
+
+# gnome configuration
+dconf write /org/gnome/shell/extensions/user-theme/name "'Catppuccin-Macchiato-Standard-Mauve-Dark'"
+gsettings set org.gnome.desktop.background picture-uri-dark ~/.themes/wallpaper/minimalistic/gradient-synth-cat.png
+gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
+gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Macchiato-Standard-Mauve-Dark"
+gsettings set org.gnome.desktop.wm.preferences theme "Catppuccin-Macchiato-Standard-Mauve-Dark"
+gsettings set org.gnome.desktop.interface icon-theme "Colloid-purple-dracula-dark"
+gsettings set org.gnome.desktop.interface cursor-theme "Colloid-cursors"
+gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
